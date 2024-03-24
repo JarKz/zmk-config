@@ -48,7 +48,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp TOGGLE_LANGUAGE>
-                , <&macro_tap &tog ENG>
+                , <&macro_tap &tog RUS>
                 ;
         };
 
