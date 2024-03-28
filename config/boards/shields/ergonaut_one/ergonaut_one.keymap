@@ -104,8 +104,8 @@
         russian_diktor_layer {
             bindings = <
                 &kp GRAVE         &kp W   &dikt_soft   &kp Z         &dikt_comma       &dikt_dot     &kp P          &kp D            &kp R         &kp L     &kp X            &to_eng
-                &mt LCTRL ESC     &kp E   &kp B        &kp T         &kp J             &kp F         &kp K          &kp Y            &kp N         &kp C     &kp H            &mt RCTRL Q
-                &mt LALT MINUS    &kp A   &kp SQT      &kp LBKT      &kp S             &kp DOT       &kp COMMA      &kp V            &kp G         &kp U     &kp SEMI         &mt RALT O
+                &mt LCTRL ESC     &kp E   &kp B        &kp T         &kp J             &kp F         &kp K          &kp Y            &kp N         &kp C     &kp H            &kp Q
+                &mt LALT MINUS    &kp A   &kp SQT      &kp LBKT      &kp S             &kp DOT       &kp COMMA      &kp V            &kp G         &kp U     &kp SEMI         &kp O
                                                        &lt FUN TAB   &mt LSHFT SPACE   &lt NUM RET   &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
             >;
         };
