@@ -56,6 +56,54 @@
             bindings = <&kp RUS_DOT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        dikt_w_mm_q: diktor_W_modmorph_Q {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp Q>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        dikt_soft_mm_w: diktor_soft_modmorph_W {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&dikt_soft>, <&kp W>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        dikt_b_mm_r: diktor_B_modmorph_R {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp R>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        dikt_a_mm_z: diktor_A_modmorph_Z {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp Z>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+
+        dikt_sqt_mm_x: diktor_SQT_modmorph_X {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp X>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        dikt_lbkt_mm_c: diktor_LBKT_modmorph_C {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp C>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        dikt_s_mm_v: diktor_S_modmorph_V {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp V>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -76,46 +124,46 @@
 
         english_colemak_layer {
             bindings = <
-                &tog_lang         &kp Q          &kp W          &kp F          &kp P             &kp G          &kp J          &kp L            &kp U          &kp Y          &kp SEMI          &kp RBKT
-                &mt LCTRL ESC     &kp A          &kp R          &kp S          &kp T             &kp D          &kp H          &kp N            &kp E          &kp I          &kp O             &mt RCTRL SQT
-                &mt LALT MINUS    &kp Z          &kp X          &kp C          &kp V             &kp B          &kp K          &kp M            &kp COMMA      &kp DOT        &kp FSLH          &mt RALT BSLH
-                                                                &lt FUN TAB    &mt LSHFT SPACE   &lt NUM RET    &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
+                &tog_lang         &kp Q          &kp W             &kp F             &kp P             &kp G          &kp J          &kp L            &kp U          &kp Y          &kp SEMI          &kp RBKT
+                &mt LCTRL ESC     &kp A          &kp R             &kp S             &kp T             &kp D          &kp H          &kp N            &kp E          &kp I          &kp O             &mt RCTRL SQT
+                &mt LALT MINUS    &kp Z          &kp X             &kp C             &kp V             &kp B          &kp K          &kp M            &kp COMMA      &kp DOT        &kp FSLH          &mt RALT BSLH
+                                                                   &lt FUN TAB       &mt LSHFT SPACE   &lt NUM RET    &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
             >;
         };
 
         russian_diktor_layer {
             bindings = <
-                &tog_lang         &kp W          &dikt_soft     &kp Z          &dikt_comma       &dikt_dot      &kp P          &kp D            &kp R          &kp L          &kp X             &kp I
-                &mt LCTRL ESC     &kp E          &kp B          &kp T          &kp J             &kp F          &kp K          &kp Y            &kp N          &kp C          &kp H             &kp Q
-                &mt LALT MINUS    &kp A          &kp SQT        &kp LBKT       &kp S             &kp DOT        &kp COMMA      &kp V            &kp G          &kp U          &kp SEMI          &kp O
-                                                                &lt FUN TAB    &mt LSHFT SPACE   &lt NUM RET    &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
+                &tog_lang         &dikt_w_mm_q   &dikt_soft_mm_w   &kp Z             &dikt_comma       &dikt_dot      &kp P          &kp D            &kp R          &kp L          &kp X             &kp I
+                &mt LCTRL ESC     &kp E          &dikt_b_mm_r      &kp T             &kp J             &kp F          &kp K          &kp Y            &kp N          &kp C          &kp H             &kp Q
+                &mt LALT MINUS    &dikt_a_mm_z   &dikt_sqt_mm_x    &dikt_lbkt_mm_c   &dikt_s_mm_v      &kp DOT        &kp COMMA      &kp V            &kp G          &kp U          &kp SEMI          &kp O
+                                                                   &lt FUN TAB       &mt LSHFT SPACE   &lt NUM RET    &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
             >;
         };
 
         numbers_layer {
             bindings = <
-                &none             &kp N1         &kp N2         &kp N3         &kp N4            &kp N5         &kp N6         &kp N7           &kp N8         &kp N9         &kp N0            &none
-                &kp LG(SPACE)     &kp EXCL       &kp AT         &kp HASH       &kp DLLR          &kp PRCNT      &kp CARET      &kp AMPS         &kp STAR       &kp BSLH       &kp RGUI          &none
-                &kp LA(SPACE)     &kp LGUI       &none          &kp MINUS      &kp PLUS          &kp EQUAL      &kp LPAR       &kp RPAR         &kp LBKT       &kp RBKT       &kp LS(LBKT)      &kp LS(RBKT)
-                                                                &trans         &trans            &trans         &trans         &trans           &trans
+                &none             &kp N1         &kp N2            &kp N3            &kp N4            &kp N5         &kp N6         &kp N7           &kp N8         &kp N9         &kp N0            &none
+                &kp LG(SPACE)     &kp EXCL       &kp AT            &kp HASH          &kp DLLR          &kp PRCNT      &kp CARET      &kp AMPS         &kp STAR       &kp BSLH       &kp RGUI          &none
+                &kp LA(SPACE)     &kp LGUI       &none             &kp MINUS         &kp PLUS          &kp EQUAL      &kp LPAR       &kp RPAR         &kp LBKT       &kp RBKT       &kp LS(LBKT)      &kp LS(RBKT)
+                                                                   &trans            &trans            &trans         &trans         &trans           &trans
             >;
         };
 
         functional_layer {
             bindings = <
-                &kp LGUI          &mo BOOT       &none          &none          &none             &kp C_VOL_UP   &none          &kp HOME         &kp PSCRN      &kp PG_UP      &mo BOOT          &kp CLCK
-                &kp LCTRL         &none          &none          &none          &none             &kp C_MUTE     &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT      &kp INS           &mt RCTRL  K_APP
-                &kp LALT          &none          &none          &none          &none             &kp C_VOL_DN   &none          &kp END          &none          &kp PG_DN      &kp PAUSE_BREAK   &kp RALT
-                                                                &trans         &trans            &trans         &trans         &trans           &trans
+                &kp LGUI          &mo BOOT       &none             &none             &none             &kp C_VOL_UP   &none          &kp HOME         &kp PSCRN      &kp PG_UP      &mo BOOT          &kp CLCK
+                &kp LCTRL         &none          &none             &none             &none             &kp C_MUTE     &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT      &kp INS           &mt RCTRL  K_APP
+                &kp LALT          &none          &none             &none             &none             &kp C_VOL_DN   &none          &kp END          &none          &kp PG_DN      &kp PAUSE_BREAK   &kp RALT
+                                                                   &trans            &trans            &trans         &trans         &trans           &trans
             >;
         };
 
         boot_layer {
             bindings = <
-                &bootloader       &none          &none          &none          &none             &none          &none          &none            &none          &none          &none             &bootloader
-                &bt BT_CLR        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3      &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3     &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0      &bt BT_CLR
-                &sys_reset        &none          &none          &none          &none             &none          &none          &none            &none          &none          &none             &sys_reset
-                                                                &trans         &none             &trans         &none          &trans           &trans
+                &bootloader       &none          &none             &none             &none             &none          &none          &none            &none          &none          &none             &bootloader
+                &bt BT_CLR        &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3     &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0      &bt BT_CLR
+                &sys_reset        &none          &none             &none             &none             &none          &none          &none            &none          &none          &none             &sys_reset
+                                                                   &trans            &none             &trans         &none          &trans           &trans
             >;
         };
     };
