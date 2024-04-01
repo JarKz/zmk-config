@@ -1,4 +1,5 @@
 last_run=$(gh run list --json databaseId -q '.[0].databaseId')
+echo "Loading firmware from job run id: $last_run"
 
 status=$(gh run view "$last_run" --json status -q '.status')
 
