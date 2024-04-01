@@ -83,6 +83,7 @@
             #binding-cells = <0>;
             bindings = <&kp A>, <&kp Z>;
             mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
 
         dikt_sqt_mm_x: diktor_SQT_modmorph_X {
             compatible = "zmk,behavior-mod-morph";
