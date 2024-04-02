@@ -81,6 +81,14 @@
             keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
         };
 
+        dikt_j_mm_t: diktor_J_modmorph_T {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&kp T>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+        };
+
         dikt_a_mm_z: diktor_A_modmorph_Z {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -142,7 +150,7 @@
         russian_diktor_layer {
             bindings = <
                 &tog_lang         &dikt_w_mm_q   &dikt_soft_mm_w   &kp Z             &dikt_comma       &dikt_dot      &kp P          &kp D            &kp R          &kp L          &kp X             &kp I
-                &mt LCTRL ESC     &kp E          &dikt_b_mm_r      &kp T             &kp J             &kp F          &kp K          &kp Y            &kp N          &kp C          &kp H             &kp Q
+                &mt LCTRL ESC     &kp E          &dikt_b_mm_r      &kp T             &dikt_j_mm_t      &kp F          &kp K          &kp Y            &kp N          &kp C          &kp H             &kp Q
                 &mt LALT MINUS    &dikt_a_mm_z   &dikt_sqt_mm_x    &dikt_lbkt_mm_c   &dikt_s_mm_v      &kp DOT        &kp COMMA      &kp V            &kp G          &kp U          &kp SEMI          &kp O
                                                                    &lt FUN TAB       &mt LSHFT SPACE   &lt NUM RET    &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
             >;
