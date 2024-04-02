@@ -3,6 +3,31 @@ RIGHT_KB_FIRMWARE=./firmware/ergonaut_one_right-seeeduino_xiao_ble-zmk.uf2
 
 DEVICE_LABEL="XIAO-SENSE"
 
+function load_firmware {
+  last_run=$(gh run list --json databaseId -q '.[0].databaseId')
+  echo "Loading firmware from job run id: $last_run"
+
+  status=$(gh run view "$last_run" --json status -q '.status')
+
+  if [ "$status" != "completed" ]; then
+    echo 'The job still not completed. Stopping script.'
+    exit 0
+  fi
+
+  conclusion=$(gh run view "$last_run" --json conclusion -q '.conclusion')
+
+  if [ "$conclusion" != "success" ]; then
+    echo 'The job is unsuccecful. Please visit page for more detail.'
+    exit 1
+  fi
+
+  if [ -d firmware ]; then
+    rm -r firmware
+  fi
+
+  gh run download "$last_run"
+}
+
 function flash_keyboard {
   SOURCE_FIRMWARE=$1
 
@@ -12,8 +37,7 @@ function flash_keyboard {
 
     disk_path=$(lsblk -O --json | jq ".blockdevices[] | select(.label == \"$DEVICE_LABEL\") | .path")
 
-    while [[ "$disk_path" == "" ]]
-    do
+    while [[ "$disk_path" == "" ]]; do
       disk_path=$(lsblk -O --json | jq ".blockdevices[] | select(.label == \"$DEVICE_LABEL\") | .path")
       sleep 1
     done
@@ -38,8 +62,7 @@ function flash_keyboard {
 
     TARGET_DIR=/Volumes/$DEVICE_LABEL
 
-    while [[ ! -d $TARGET_DIR ]]
-    do
+    while [[ ! -d $TARGET_DIR ]]; do
       sleep 1
     done
 
@@ -51,12 +74,13 @@ function flash_keyboard {
   fi
 }
 
+load_firmware
+echo -e "Done\!\n"
+
 sudo echo "Use your right keyboard."
 flash_keyboard $RIGHT_KB_FIRMWARE
-echo "Done!"
-echo ""
+echo -e "Done\!\n"
 
 echo "Use your left keyboard."
 flash_keyboard $LEFT_KB_FIRMWARE
-echo "Done!"
-echo ""
+echo -e "Done\!\n"
