@@ -66,7 +66,9 @@ function flash_keyboard {
       sleep 1
     done
 
-    cp "$SOURCE_FIRMWARE" "$TARGET_DIR"
+    sudo cp "$SOURCE_FIRMWARE" "$TARGET_DIR"
+
+    sleep 5
 
   else
     echo "Unknown OS!"
@@ -75,12 +77,12 @@ function flash_keyboard {
 }
 
 load_firmware
-echo -e "Done\!\n"
+printf "Done!\n\n"
 
 sudo echo "Use your right keyboard."
 flash_keyboard $RIGHT_KB_FIRMWARE
-echo -e "Done\!\n"
+printf "Done!\n\n"
 
 echo "Use your left keyboard."
 flash_keyboard $LEFT_KB_FIRMWARE
-echo -e "Done\!\n"
+printf "Done!\n\n"
