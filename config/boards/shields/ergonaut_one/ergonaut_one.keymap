@@ -172,7 +172,7 @@
                 &mt LALT MINUS    &kp Z          &kp X             &kp C             &kp V             &kp B          &kp K          &kp M            &kp COMMA      &kp DOT        &kp FSLH          &mt RALT BSLH
                                                                    &lt LSHIFT        &mt SPACE         &lt RET        &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
             >;
-        }
+        };
 
         numbers_layer {
             bindings = <
