@@ -42,6 +42,8 @@ parse_config:
     '&mkp MB4': Back Click
     '&mkp MB5': Forward Click
 
+    '&tog_lang': Toggle Language
+
   zmk_combos:
     combo_tab:    {align: top, o: 0.15}
     combo_del:    {align: top, o: 0.15}

@@ -1,28 +1,28 @@
 layers:
-  default:
-  - {t: ']', h: Gui}
+  english_colemak:
+  - Toggle Language
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
+  - F
+  - P
+  - G
+  - J
+  - L
   - U
+  - Y
+  - ;
+  - ']'
+  - {t: Esc, h: Ctrl}
+  - A
+  - R
+  - S
+  - T
+  - D
+  - H
+  - N
+  - E
   - I
   - O
-  - P
-  - '['
-  - {t: '`', h: Ctrl}
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
   - {t: '''', h: Ctrl}
   - {t: '-', h: Alt}
   - Z
@@ -30,44 +30,106 @@ layers:
   - C
   - V
   - B
-  - N
+  - K
   - M
   - ','
   - .
   - /
   - {t: \, h: Alt}
-  - {t: ↹, h: raise}
+  - {t: ↹, h: functional}
   - {t: ␣, h: Shift}
-  - {t: ⏎, h: lower}
-  - {t: Esc, h: lower}
-  - {t: ⌫, h: Shift}
-  - {t: ⌦, h: raise}
-  lower:
-  - {t: F1, h: Gui}
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - {t: +, h: Ctrl}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - {t: '-', h: Ctrl}
-  - {t: '=', h: Alt}
+  - {t: ⏎, h: numbers}
+  - {t: ⌫, h: numbers}
+  - {t: ␣, h: Shift}
+  - {t: ⌦, h: functional}
+  russian_diktor:
+  - Toggle Language
+  - {t: W, s: Q}
+  - {t: M, s: W}
+  - Z
+  - {t: '?', s: '&'}
+  - {t: /, s: '!'}
+  - P
+  - D
+  - R
+  - L
+  - X
+  - I
+  - {t: Esc, h: Ctrl}
+  - E
+  - {t: B, s: R}
+  - T
+  - {t: J, s: T}
+  - F
+  - K
+  - Y
+  - N
+  - C
+  - H
+  - Q
+  - {t: '-', h: Alt}
+  - {t: A, s: Z}
+  - {t: '''', s: X}
+  - {t: '[', s: C}
+  - {t: S, s: V}
+  - {t: ., s: B}
+  - ','
+  - V
+  - G
+  - U
+  - ;
+  - O
+  - {t: ↹, h: functional}
+  - {t: ␣, h: Shift}
+  - {t: ⏎, h: numbers}
+  - {t: ⌫, h: numbers}
+  - {t: ␣, h: Shift}
+  - {t: ⌦, h: functional}
+  gaming:
+  - ''
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - ']'
+  - Esc
+  - A
+  - R
+  - S
+  - T
+  - D
+  - H
+  - N
+  - E
+  - I
+  - O
+  - {t: '''', h: Ctrl}
+  - {t: '-', h: Alt}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - /
+  - {t: \, h: Alt}
+  - LSHIFT
+  - ␣
+  - ⏎
+  - {t: ⌫, h: numbers}
+  - {t: ␣, h: Shift}
+  - {t: ⌦, h: functional}
+  numbers:
+  - {t: gaming, h: toggle}
   - '1'
   - '2'
   - '3'
@@ -78,57 +140,81 @@ layers:
   - '8'
   - '9'
   - '0'
-  - Alt
+  - ''
+  - Gui+ ␣
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - \
+  - Gui
+  - ''
+  - Alt+ ␣
+  - Gui
+  - ''
+  - '-'
+  - +
+  - '='
+  - (
+  - )
+  - '['
+  - ']'
+  - Sft+ [
+  - Sft+ ]
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  raise:
-  - {t: KP NUM, h: Gui}
-  - KP SLASH
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
+  functional:
+  - Insert
+  - F1
+  - F2
+  - F3
+  - F4
   - Vol Up
+  - ''
   - Home
   - Print Scrn
   - Page Up
-  - SLCK
+  - BRI INC
   - CLCK
-  - {t: '=', h: Ctrl}
-  - KP MULTIPLY
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
+  - APP
+  - F5
+  - F6
+  - F7
+  - F8
   - MUTE
   - ←
+  - ↓
   - ↑
   - →
-  - Insert
-  - {t: APP, h: Ctrl}
-  - Alt
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP DOT
+  - ''
+  - ''
+  - ''
+  - F9
+  - F10
+  - F11
+  - F12
   - Vol Down
+  - ''
   - End
-  - ↓
+  - ''
   - Page Down
-  - Pause Break
-  - Alt
+  - BRI DEC
+  - ''
   - {type: held}
   - {t: ▽, type: trans}
+  - boot
+  - boot
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  adjust:
+  boot:
   - Boot
   - ''
   - ''
