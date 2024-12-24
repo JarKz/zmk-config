@@ -150,8 +150,8 @@
         english_colemak_layer {
             bindings = <
                 &tog_lang         &kp Q          &kp W             &kp F             &kp P             &kp G          &kp J          &kp L            &kp U          &kp Y          &kp SEMI          &kp RBKT
-                &mt LCTRL ESC     &kp A          &kp R             &kp S             &kp T             &kp D          &kp H          &kp N            &kp E          &kp I          &kp O             &mt RCTRL SQT
-                &mt LALT MINUS    &kp Z          &kp X             &kp C             &kp V             &kp B          &kp K          &kp M            &kp COMMA      &kp DOT        &kp FSLH          &mt RALT BSLH
+                &mt LCTRL ESC     &kp A          &kp R             &kp S             &kp T             &kp D          &kp H          &kp N            &kp E          &kp I          &kp O             &kp SQT
+                &mt LALT MINUS    &kp Z          &kp X             &kp C             &kp V             &kp B          &kp K          &kp M            &kp COMMA      &kp DOT        &kp FSLH          &kp BSLH
                                                                    &lt FUN TAB       &mt LSHFT SPACE   &lt NUM RET    &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
             >;
         };
@@ -168,8 +168,8 @@
         gaming_layer {
             bindings = <
                 &none             &kp Q          &kp W             &kp F             &kp P             &kp G          &kp J          &kp L            &kp U          &kp Y          &kp SEMI          &kp RBKT
-                &kp ESC           &kp A          &kp R             &kp S             &kp T             &kp D          &kp H          &kp N            &kp E          &kp I          &kp O             &mt RCTRL SQT
-                &mt LALT MINUS    &kp Z          &kp X             &kp C             &kp V             &kp B          &kp K          &kp M            &kp COMMA      &kp DOT        &kp FSLH          &mt RALT BSLH
+                &kp ESC           &kp A          &kp R             &kp S             &kp T             &kp D          &kp H          &kp N            &kp E          &kp I          &kp O             &kp SQT
+                &mt LALT MINUS    &kp Z          &kp X             &kp C             &kp V             &kp B          &kp K          &kp M            &kp COMMA      &kp DOT        &kp FSLH          &kp BSLH
                                                                    &kp LSHIFT        &kp SPACE         &kp RET        &lt NUM BSPC   &mt RSHFT SPACE  &lt FUN DEL
             >;
         };
@@ -177,7 +177,7 @@
         numbers_layer {
             bindings = <
                 &tog GAMING       &kp N1         &kp N2            &kp N3            &kp N4            &kp N5         &kp N6         &kp N7           &kp N8         &kp N9         &kp N0            &none
-                &kp LG(SPACE)     &kp EXCL       &kp AT            &kp HASH          &kp DLLR          &kp PRCNT      &kp CARET      &kp AMPS         &kp STAR       &kp BSLH       &kp RGUI          &none
+                &kp LG(SPACE)     &kp EXCL       &kp AT            &kp HASH          &kp DLLR          &kp PRCNT      &kp CARET      &kp AMPS         &kp STAR       &kp BSLH       &kp RGUI          &kp RCRTL
                 &kp LA(SPACE)     &kp LGUI       &none             &kp MINUS         &kp PLUS          &kp EQUAL      &kp LPAR       &kp RPAR         &kp LBKT       &kp RBKT       &kp LS(LBKT)      &kp LS(RBKT)
                                                                    &trans            &trans            &trans         &trans         &trans           &trans
             >;
@@ -186,8 +186,8 @@
         functional_layer {
             bindings = <
                 &kp INS           &kp F1         &kp F2            &kp F3            &kp F4            &kp C_VOL_UP   &none          &kp HOME         &kp PSCRN      &kp PG_UP      &kp C_BRI_INC     &kp CLCK
-                &kp K_APP         &kp F5         &kp F6            &kp F7            &kp F8            &kp C_MUTE     &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT      &none             &none
-                &none             &kp F9         &kp F10           &kp F11           &kp F12           &kp C_VOL_DN   &none          &kp END          &none          &kp PG_DN      &kp C_BRI_DEC     &none
+                &kp K_APP         &kp F5         &kp F6            &kp F7            &kp F8            &kp C_MUTE     &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT      &none             &kp RCTRL
+                &none             &kp F9         &kp F10           &kp F11           &kp F12           &kp C_VOL_DN   &none          &kp END          &none          &kp PG_DN      &kp C_BRI_DEC     &kp RALT
                                                                    &trans            &trans            &mo BOOT       &mo BOOT       &trans           &trans
             >;
         };
