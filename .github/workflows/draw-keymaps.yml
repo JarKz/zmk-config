@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'config/*.keymap'
+      - 'config/boards/shields/ergonaut_one/*.keymap'
       - 'config/includes/*.dtsi'
       - keymap-drawer/config.yaml
       - .github/workflows/draw-keymaps.yml

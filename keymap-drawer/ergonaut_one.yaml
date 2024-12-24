@@ -23,7 +23,7 @@ layers:
   - E
   - I
   - O
-  - {t: '''', h: Ctrl}
+  - ''''
   - {t: '-', h: Alt}
   - Z
   - X
@@ -35,7 +35,7 @@ layers:
   - ','
   - .
   - /
-  - {t: \, h: Alt}
+  - \
   - {t: ↹, h: functional}
   - {t: ␣, h: Shift}
   - {t: ⏎, h: numbers}
@@ -109,7 +109,7 @@ layers:
   - E
   - I
   - O
-  - {t: '''', h: Ctrl}
+  - ''''
   - {t: '-', h: Alt}
   - Z
   - X
@@ -121,7 +121,7 @@ layers:
   - ','
   - .
   - /
-  - {t: \, h: Alt}
+  - \
   - LSHIFT
   - ␣
   - ⏎
@@ -141,7 +141,7 @@ layers:
   - '9'
   - '0'
   - ''
-  - Gui+ ␣
+  - Gui+␣
   - '!'
   - '@'
   - '#'
@@ -152,8 +152,8 @@ layers:
   - '*'
   - \
   - Gui
-  - ''
-  - Alt+ ␣
+  - Ctrl
+  - Alt+␣
   - Gui
   - ''
   - '-'
@@ -163,8 +163,8 @@ layers:
   - )
   - '['
   - ']'
-  - Sft+ [
-  - Sft+ ]
+  - Sft+[
+  - Sft+]
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -195,7 +195,7 @@ layers:
   - ↑
   - →
   - ''
-  - ''
+  - Ctrl
   - ''
   - F9
   - F10
@@ -207,7 +207,7 @@ layers:
   - ''
   - Page Down
   - BRI DEC
-  - ''
+  - Alt
   - {type: held}
   - {t: ▽, type: trans}
   - boot
